@@ -1,0 +1,51 @@
+.padding-20{
+    padding: 20px;
+}
+
+.padding-top-20{
+    padding-top: 20px;
+}
+
+.padding-bottom-20{
+    padding-bottom: 20px;
+}
+
+.margin-0{
+    margin: 0px;
+}
+
+.red-asterisk{
+    color: red;
+}
+
+.red-option{
+    color: red;
+}
+
+.green-option{
+    color: green;
+}
+
+.center-info{
+    text-align: center;
+}
+
+.display-block-none{
+    display: none;
+}
+
+.align-right{
+    text-align: right;
+}
+
+.align-left{
+    text-align: left;
+}
+
+.pad-10{
+    padding: 10px;
+}
+
+.font-white{
+    color: white;
+}
