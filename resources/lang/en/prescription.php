@@ -39,9 +39,4 @@ return [
         'organic_damage' => 'Organic damage',
         'prescribe' => 'Prescribe',
     ],
-    'error' => [
-        'wrong_format' => 'The format of the file you input is wrong.'
-    ],
-    'succesful_create' => 'Customer created successfully!',
-    'succesful_update' => 'Customer updated successfully!',
 ];

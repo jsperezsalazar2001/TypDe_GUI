@@ -13,10 +13,10 @@ return [
     |
     */
 
-    'previous' => '&laquo; Previous',
-    'next' => 'Next &raquo;',
-    'home' => 'Home',
-    'privacy_policy' => 'Privacy Policy',
-    'terms_conditions' => 'Terms & Conditions',
+    'previous' => '&laquo; Anterior',
+    'next'     => 'Siguiente &raquo;',
+    'home' => 'Inicio',
+    'privacy_policy' => 'Políticas de privacidad',
+    'terms_conditions' => 'Terminos y condiciones',
 
 ];
