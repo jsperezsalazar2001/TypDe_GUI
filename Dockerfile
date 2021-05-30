@@ -19,7 +19,7 @@ RUN chmod -R 777 public/
 RUN a2enmod rewrite
 RUN service apache2 restart
 RUN apt update
-RUN apt install build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
+RUN apt install -y build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
 RUN wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
 RUN tar -xf Python-3.9.1.tgz
 RUN cd Python-3.9.1
