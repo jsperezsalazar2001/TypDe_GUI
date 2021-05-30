@@ -17,3 +17,4 @@ Route::get('/', 'App\Http\Controllers\HomeController@index')->name("home.index")
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 
 Route::post('/prescription/prescribe', 'App\Http\Controllers\PrescriptionController@prescribe')->name('prescription.prescribe');
+

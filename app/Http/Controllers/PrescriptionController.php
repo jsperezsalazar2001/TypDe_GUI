@@ -56,18 +56,35 @@ class PrescriptionController extends Controller
         $organic_damage = 0;
         if ($request->input('organic_damage') == '1') $organic_damage = 1;
 
-        $symptoms = [$fever, $headache, $ocular_pain, $myalgia, $arthralgia, $skin_rash, $abdominal_pain, $vomiting, $drowsiness, $hypotension, $hepatomegaly, $mucosal_bleeding, 
+        $symptoms = [$age, $fever, $headache, $ocular_pain, $myalgia, $arthralgia, $skin_rash, $abdominal_pain, $vomiting, $drowsiness, $hypotension, $hepatomegaly, $mucosal_bleeding, 
                     $hypothermia, $increased_hematocrit, $low_platelet_count, $fluid_overload, $extravasation, $bleeding_hemothorax, $shock, $organic_damage];
 
         $symptoms = json_encode($symptoms);
         // Calling the model
-
+        $command = 'python "'.public_path().'\public\TypDe\run_system.py" '."{$symptoms}";
+        //$command = 'python3 "'.public_path().'\public\TypDe\run_system.py" '."{$symptoms}";
+        //$command = 'python -V';
+        exec($command, $output);
         // Model results
-
+        $results_code = json_decode($output[0]);
+        //dd($results_code);
         // Preparing data for results view
         $data['name'] = $name;
         $data['age'] = $request->input('age');
-        $data['results'] = "";
+        $data['average'] = (float) $output[1];
+        $data['dengue_type'] = $results_code[0];
+        $data['tylenol'] = $results_code[1];
+        $data['drink_water'] = $results_code[2];
+        $data['drink_rehyd'] = $results_code[3];
+        $data['isotonic_solution'] = $results_code[4];
+        $data['crystalloid'] = $results_code[5];
+        $data['hospitalization'] = $results_code[6];
+        $data['percentage'] = $results_code[7];
+
+        $breadlist = array();
+        $breadlist[0] = array(__('prescription.prescribe_patient'), "home.index", null, "0");
+        $breadlist[1] = array(__('prescription.results'), "", null, "1");
+        $data['breadlist'] = $breadlist;
 
         return view('prescription.results')->with("data",$data);
     }
