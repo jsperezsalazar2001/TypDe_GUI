@@ -1,19 +1,3 @@
-FROM ubuntu:16.04
-
-RUN apt-get update && \
-  apt-get install -y software-properties-common && \
-  add-apt-repository ppa:deadsnakes/ppa
-RUN apt-get update
-
-RUN apt-get install -y build-essential python3 python3-dev python3-pip python3-venv
-RUN apt-get install -y git
-
-# update pip
-RUN python3 -m pip install pip --upgrade
-RUN python3 -m pip install wheel
-RUN python3 -m pip install numpy
-RUN python3 -m pip install simpy
-
 FROM php:7.2-apache-stretch
 RUN apt-get update -y && \
     apt-get install -y openssl zip unzip git
