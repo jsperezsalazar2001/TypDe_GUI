@@ -22,4 +22,4 @@ if __name__ == '__main__':
     matrix = np.load(file_dengue)
     prescriptive_model, avg = prescriptive.make_prescription(predictive_model, matrix)
     print(json.dumps(prescriptive_model[21:].tolist()))
-    print(json.dumps(avg))
+    print(json.dumps(float("{:.2f}".format(avg))))

@@ -83,22 +83,22 @@
 
                         <div class="collapse" id="collapseExample">
                             <div class="card card-body">
-                                {{ __('prescription.additional_recomendations.intro_1') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_1') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.1_1') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.1_2') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.1_3') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_2') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_2') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.2_1') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.2_2') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_3') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_3') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.3_1') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_4') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_4') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.4_1') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.4_2') }}</li>
@@ -109,17 +109,17 @@
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.4_7') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.4_8') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_5') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_5') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.5_1') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_6') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_6') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.6_1') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.6_2') }}</li>
                                 </ul><br/>
-                                {{ __('prescription.additional_recomendations.intro_7') }}<br/>
-                                {{ __('prescription.additional_recomendations.intro_8') }}
+                                <b>{{ __('prescription.additional_recomendations.intro_7') }}</b><br/>
+                                <b>{{ __('prescription.additional_recomendations.intro_8') }}</b>
                                 <ul class="list-group">
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.8_1') }}</li>
                                     <li class="list-group-item">{{ __('prescription.additional_recomendations.8_2') }}</li>
