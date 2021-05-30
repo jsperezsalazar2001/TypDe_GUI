@@ -18,3 +18,10 @@ RUN chmod -R 777 public/public/TypDe
 RUN chmod -R 777 public/
 RUN a2enmod rewrite
 RUN service apache2 restart
+RUN apt update
+RUN apt install -y wget build-essential zlib1g-dev libncurses5-dev libgdbm-dev libnss3-dev libssl-dev libsqlite3-dev libreadline-dev libffi-dev curl libbz2-dev
+RUN wget https://www.python.org/ftp/python/3.9.1/Python-3.9.1.tgz
+RUN tar -xf Python-3.9.1.tgz
+RUN ./Python-3.9.1/configure --enable-optimizations
+RUN make altinstall
+RUN pip3.9 install numpy pandas scipy scikit-learn openpyxl

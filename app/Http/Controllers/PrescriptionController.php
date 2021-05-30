@@ -68,7 +68,9 @@ class PrescriptionController extends Controller
         // Model results
         $results_code = json_decode($output[0]);
         //dd($results_code);
+
         // Preparing data for results view
+
         $data['name'] = $name;
         $data['age'] = $request->input('age');
         $data['average'] = (float) $output[1];

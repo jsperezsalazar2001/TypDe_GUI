@@ -11,6 +11,8 @@ Input: dengue_type_1_x
 Output: result
 """
 def run_model(dengue_type_1_x, model):
+    if (dengue_type_1_x[0][-2] == 1 or dengue_type_1_x[0][-1] == 1):
+        return 3 
     result = model.predict(np.array(dengue_type_1_x))
     #print(result)
     return result
