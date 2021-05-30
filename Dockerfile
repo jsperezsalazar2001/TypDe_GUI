@@ -1,6 +1,5 @@
-FROM php:7.2-apache-stretch
-RUN apt-get update -y && \
-    apt-get install -y openssl zip unzip git
+FROM php:7.4-apache
+RUN apt-get update -y && apt-get install -y openssl zip unzip git 
 RUN docker-php-ext-install pdo_mysql
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 COPY . /var/www/html
@@ -13,7 +12,8 @@ RUN composer install \
     --no-scripts \
     --prefer-dist
 
+RUN php artisan key:generate
 RUN chmod -R 777 storage
-RUN chmod -R 777 public/python
+RUN chmod -R 777 public/public/TypDe
 RUN a2enmod rewrite
 RUN service apache2 restart
