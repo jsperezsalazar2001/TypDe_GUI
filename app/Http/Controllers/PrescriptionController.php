@@ -61,8 +61,8 @@ class PrescriptionController extends Controller
 
         $symptoms = json_encode($symptoms);
         // Calling the model
-        $command = 'python "'.public_path().'\public\TypDe\run_system.py" '."{$symptoms}";
-        //$command = 'python3 "'.public_path().'\public\TypDe\run_system.py" '."{$symptoms}";
+        //$command = 'python "'.public_path().'\public\TypDe\run_system.py" '."{$symptoms}";
+        $command = 'python3.9 "'.public_path().'/public/TypDe/run_system.py" '."{$symptoms}";
         //$command = 'python -V';
         exec($command, $output);
         // Model results
